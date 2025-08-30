@@ -234,8 +234,8 @@ export const parseHtml = (
   )
     .trim()
     .replace(/\s+/g, " ");
-  const description = getSdString(artSd?.["description"])?.trim();
-  metaStr("description")?.trim() ||
+  const description = getSdString(artSd?.["description"])?.trim() ||
+    metaStr("description")?.trim() ||
     metaStr("og:description")?.trim() ||
     metaStr("twitter:description")?.trim() ||
     undefined;
